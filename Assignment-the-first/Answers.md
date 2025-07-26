@@ -12,19 +12,20 @@
 
 2. Per-base NT distribution
     1. Use markdown to insert your 4 histograms here.
-    2. **YOUR ANSWER HERE**
-    3. **YOUR ANSWER HERE**
+    2. A good quality score cutoff for index reads is 30. I chose such a high score because as index reads are used to demultiplex reads to the correct sample, misassigning even a single base can result in incorrect sample assignment. A threshold of 30 ensures a 99.9% accuracy. For biological read pairs, I think a 20 cutoff is sufficient, since downstream tools like aligners can handle base errors. A quality score of 20 corresponds to a 99% base call accuracy and is a common threshold.
+    3. i1 N count = 3976613 , i2 N count - 3328051
     
 ## Part 2
 1. Define the problem  / Describe Ouput
 
 ```
-We are demultiplexing to separate properly matched index pairs from index-hopped or unknown index reads to ensure accuracy in downstream analysis. Our sequencing data consists of four parallel FASTQ files: Read 1 (R1), Read 2 (R2), Index 1 (I1), and Index 2 (I2). Each read has a pair of index sequences that should match the original sample assignment. We will compare the index pairs in each read to a list of 24 valid index sequences. Based on the comparison:
+We are demultiplexing to separate properly matched index pairs from index-hopped or unknown index reads to ensure accuracy in downstream analysis. Our sequencing data consists of four parallel FASTQ files: Read 1 (R1), Read 2 (R4), Index 1 (R2), and Index 2 (R3). Each read has a pair of index sequences that should match the original sample assignment. We will compare the index pairs in each read to a list of 24 valid index sequences. Based on these comparison:
 
-If both indexes are valid and match → write to matched FASTQ files
-If both are valid but do not match → write to index-hopped files
-If either index is invalid (contains 'N') or has low quality → write to unknown files
-All read headers will be modified to include the index pair (e.g., @read1 ACGTACGT-TGCATGCA). Output files will be separated by category and used for later quality filtering and analysis.
+1. If both indexes are valid and match we write to matched FASTQ files
+2. If both are valid but do not match  we write to index-hopped files
+3. If either index is invalid (contains 'N') or has low quality we write to unknown files
+
+All read headers will be modified to include the index pair (e.g., @read1 ACGTACGT-TGCATGCA). Output files will be separated by category and used later.
 ```
 
 
