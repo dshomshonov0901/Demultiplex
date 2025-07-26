@@ -93,7 +93,8 @@ DEFINE FUNCTION demultiplex_reads:
     RETURN counts of: matched, hopped, unknown reads
 
 HEADER:
-    ```python
+   
+```python
         
         def(demultiplex_reads(r1_file: str, r2_file: str, i1_file: str, i2_file: str, valid_indexes: set[str], quality_cutoff: float):
     
