@@ -94,17 +94,17 @@ DEFINE FUNCTION demultiplex_reads:
 
 HEADER:
 
-def(demultiplex_reads(r1_file: str, r2_file: str, i1_file: str, i2_file: str, valid_indexes: set[str], quality_cutoff: float):
+    def(demultiplex_reads(r1_file: str, r2_file: str, i1_file: str, i2_file: str, valid_indexes: set[str], quality_cutoff: float):
     """
-    Demultiplexes paired-end FASTQ reads into matched, index-hopped, and unknown categories.
+        Demultiplexes paired-end FASTQ reads into matched, index-hopped, and unknown categories.
     
-    Parameters:
-        r1_file, r2_file: Paths to biological read FASTQ files
-        i1_file, i2_file: Paths to index read FASTQ files
-        valid_indexes: Set of 24 valid index sequences
-        quality_cutoff: Minimum average Phred score for index sequences
+        Parameters:
+            r1_file, r2_file: Paths to biological read FASTQ files
+            i1_file, i2_file: Paths to index read FASTQ files
+            valid_indexes: Set of 24 valid index sequences
+            quality_cutoff: Minimum average Phred score for index sequences
 
-    Returns:
-        A dictionary with counts of matched, hopped, and unknown read pairs
+        Returns:
+            A dictionary with counts of matched, hopped, and unknown read pairs
     """
 
