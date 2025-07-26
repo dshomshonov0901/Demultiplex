@@ -93,9 +93,10 @@ DEFINE FUNCTION demultiplex_reads:
     RETURN counts of: matched, hopped, unknown reads
 
 HEADER:
-
-    def(demultiplex_reads(r1_file: str, r2_file: str, i1_file: str, i2_file: str, valid_indexes: set[str], quality_cutoff: float):
-    """
+    ```python
+        
+        def(demultiplex_reads(r1_file: str, r2_file: str, i1_file: str, i2_file: str, valid_indexes: set[str], quality_cutoff: float):
+    
         Demultiplexes paired-end FASTQ reads into matched, index-hopped, and unknown categories.
     
         Parameters:
@@ -106,5 +107,5 @@ HEADER:
 
         Returns:
             A dictionary with counts of matched, hopped, and unknown read pairs
-    """
+```
 
