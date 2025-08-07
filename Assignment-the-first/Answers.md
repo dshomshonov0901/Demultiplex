@@ -1,7 +1,7 @@
 # Assignment the First
 
 ## Part 1
-1. Be sure to upload your Python script. Provide a link to it here: part1.1.py
+1. Be sure to upload your Python script. Provide a link to it here: [part1.1.py](https://github.com/dshomshonov0901/Demultiplex/blob/master/Assignment-the-first/part1.1.py)
 
 | File name | label | Read length | Phred encoding |
 |---|---|---|---|
