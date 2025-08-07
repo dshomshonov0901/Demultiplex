@@ -1,7 +1,7 @@
 # Assignment the First
 
 ## Part 1
-1. Be sure to upload your Python script. Provide a link to it here:
+1. Be sure to upload your Python script. Provide a link to it here: part1.1.py
 
 | File name | label | Read length | Phred encoding |
 |---|---|---|---|
