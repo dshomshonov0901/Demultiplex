@@ -83,7 +83,7 @@ def demultiplex(r1_fp, r2_fp, i1_fp, i2_fp, index_fp, out_dir):
             # read 4-line blocks
             r1_block = [r1_rl(), r1_rl(), r1_rl(), r1_rl()]
             if not r1_block[0]:
-                break  # EOF
+                break  # End of file
             r2_block = [r2_rl(), r2_rl(), r2_rl(), r2_rl()]
             i1_block = [i1_rl(), i1_rl(), i1_rl(), i1_rl()]
             i2_block = [i2_rl(), i2_rl(), i2_rl(), i2_rl()]
@@ -92,7 +92,7 @@ def demultiplex(r1_fp, r2_fp, i1_fp, i2_fp, index_fp, out_dir):
             i2_seq = rev_comp(i2_block[1].rstrip("\n").upper())  # reverse complement i2
             pair_label = f"{i1_seq}-{i2_seq}"
 
-            # Unknown: any N or not in whitelist
+            # Unknown: any N or not in list
             if "N" in i1_seq or "N" in i2_seq:
                 write_read_block(unk_r1, unk_r2, r1_block, r2_block, pair_label)
                 counts["unknown"] += 1
@@ -174,10 +174,7 @@ def main():
     for k, v in sorted(stats.items()):
         print(f"{k}: {v}")
 
-    # quick peek at top 10 hopped pairs (handy in slurm log)
-    # (file has the full list)
-    # You can comment this out if you want totally quiet logs.
-    # Read back hopped_pairs for convenience would require state; just hint user.
+
     print("\nDetails written to: pair_counts.tsv, hopped_pairs.tsv, pair_matrix.tsv")
 
 if __name__ == "__main__":
