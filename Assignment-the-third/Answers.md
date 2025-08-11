@@ -1,8 +1,30 @@
-Percentage of reads from each sample:
 
-Overall amount of index swapping:
+--- Summary ---
+hopped: 707740
+matched_AACAGCGA: 8872034
+matched_ACGATCAG: 7942853
+matched_AGAGTCCA: 11316780
+matched_AGGATAGC: 8673180
+matched_ATCATGCG: 10087503
+matched_ATCGTGGT: 6887592
+matched_CACTTCAC: 4191388
+matched_CGATCGAT: 5604966
+matched_CGGTAATC: 5064906
+matched_CTAGCTCA: 17332036
+matched_CTCTGGAT: 34976387
+matched_GATCAAGG: 6587100
+matched_GATCTTGC: 3641072
+matched_GCTACTCT: 7416557
+matched_GTAGCGTA: 8119243
+matched_GTCCTAAG: 8830276
+matched_TACCGGAT: 76363857
+matched_TAGCCATG: 10629633
+matched_TATGGCAC: 11184304
+matched_TCGACAAG: 3853350
+matched_TCGAGAGT: 11741547
+matched_TCGGATTC: 4611350
+matched_TCTTCGAC: 42094112
+matched_TGTTCCGT: 15733007
+unknown: 30783962
 
-
-My command line (sbatch line): sbatch Assignment-the-third/demultiplex_test.py -r1 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R1_001.fastq.gz -r2 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R4_001.fastq.gz -i1 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz -i2 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz -idx /projects/bgmp/shared/2017_sequencing/indexes.txt -o Assignment-the-third/output
-
-sadly could not figure out code for tracking all index hopping combinations / did not have time to execute
+Details written to: pair_counts.tsv, hopped_pairs.tsv, pair_matrix.tsv
